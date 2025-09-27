@@ -16,7 +16,7 @@ body::before {
   position: absolute;
   background: url('Patterns/Orbits.png');
   background-repeat: repeat;
-  background position: center;
+  background-position: center;
   background-size: cover;
   opacity: 25%;
   z-index: 1;
@@ -55,7 +55,65 @@ input {
   z-index: 2;
 }
 
-#Miscellaneous button {
+#page1 {
+  background-color: #07173F;
+  color: #ffffff;
+  border-radius: 50px;
+  border-color: #ffffff;
+  border: 10px;
+  margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  text-align: left;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: 500px;
+  padding: 10px;
+  font-size: 16px;
+  z-index: 2;
+  visibility: hidden;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+#page1.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#page2 {
+  background-color: #07173F;
+  color: #ffffff;
+  border-radius: 50px;
+  border-color: #ffffff;
+  border: 10px;
+  margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  text-align: left;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: 500px;
+  padding: 10px;
+  font-size: 16px;
+  z-index: 2;
+  visibility: hidden;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+#page2.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#togglemenu button {
   background: #07173F;
   color: #ffffff;
   border-radius: 50px;
@@ -63,19 +121,52 @@ input {
   margin: auto;
   width: 60px;
   height: 60px;
-  border-radius 120px;
+  border-radius: 120px;
   z-index: 3;
-  font-family: 'JetBrainsMonoNerdFont-Regular';
   font-size: 30px;
-  text-align: left;
-  align: right;
+  text-align: center;
 }
 
-#Miscellaneous menu {
+#togglemenu a {
+  background: #07173F;
+  color: #ffffff;
+  border-radius: 50px;
+  border-color: #ffffff;
+  margin: auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 120px;
+  z-index: 3;
+  font-size: 30px;
+  text-align: center;
+}
+
+#togglemenu .barmenu {
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 3;
+}
+
+#togglemenu .menuelements {
+  visibility: hidden;
+  align-items: left;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+#togglemenu .menuelements.show {
+  opacity: 1;
+  visibility: visible;
+  z-index: 3;
 }
 
 @font-face {
-  font-family: JetBrainsMonoNerdFont-Regular 
-  src: url('Fonts/NerdFonts/JetBrainsMono/JetbrainsMonoNerdFont-Regular.ttf');
+  font-family: 'JetBrainsMonoNerdFont-Regular';
+  src: url('Fonts/JetBrainsMonoNerdFont-Regular.ttf');
 }
-
