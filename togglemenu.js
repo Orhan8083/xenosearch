@@ -2,15 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const container = document.getElementById("togglemenu");
 
-  
-
-    // Toggle menu open/close
-
     const barMenuBtn = container.querySelector(".barmenu button");
 
     const menuElements = container.querySelector(".menuelements");
-
-  
 
     barMenuBtn.addEventListener("click", () => {
 
@@ -18,35 +12,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-  
-
-    // Page controls
-
     const aboutUsBtn = container.querySelector(".aboutusbutton");
 
     const codeBtn = container.querySelector(".codebutton");
-
-  
 
     const page1 = container.querySelector("#page1");
 
     const page2 = container.querySelector("#page2");
 
-  
-
-    // Show/hide About Us
-
     aboutUsBtn.addEventListener("click", () => {
 
-      page1.classList.toggle("show"); // fade in/out
+      page1.classList.toggle("show");
 
-      page2.classList.remove("show"); // make sure other page closes
-
+      page2.classList.remove("show");
+        
     });
-
-  
-
-    // Show/hide Code
 
     codeBtn.addEventListener("click", () => {
 
@@ -55,7 +35,4 @@ document.addEventListener("DOMContentLoaded", () => {
       page1.classList.remove("show");
 
     });
-
-  });
-
-  
+});
