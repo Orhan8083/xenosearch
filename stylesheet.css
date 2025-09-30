@@ -27,14 +27,6 @@ body > * {
   z-index: 2;
 }
 
-h1 {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  color: #ffffff;
-}
-
 input {
   background-color: #07173F;
   color: #ffffff;
@@ -58,7 +50,7 @@ input {
 #page1 {
   background-color: #07173F;
   color: #ffffff;
-  border-radius: 50px;
+  border-radius: 25px;
   border-color: #ffffff;
   border: 10px;
   margin: auto;
@@ -82,12 +74,13 @@ input {
 #page1.show {
   opacity: 1;
   visibility: visible;
+  transition: opacity 0.5s ease;
 }
 
 #page2 {
   background-color: #07173F;
   color: #ffffff;
-  border-radius: 50px;
+  border-radius: 25px;
   border-color: #ffffff;
   border: 10px;
   margin: auto;
@@ -111,6 +104,7 @@ input {
 #page2.show {
   opacity: 1;
   visibility: visible;
+  transition: opacity 0.5s ease;
 }
 
 #togglemenu button {
@@ -125,6 +119,7 @@ input {
   z-index: 3;
   font-size: 30px;
   text-align: center;
+  font-family: 'JetBrainsMonoNerdFont-Regular';
 }
 
 #togglemenu a {
@@ -137,7 +132,7 @@ input {
   height: 60px;
   border-radius: 120px;
   z-index: 3;
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -164,9 +159,55 @@ input {
   opacity: 1;
   visibility: visible;
   z-index: 3;
+  transition: opacity 0.5s ease;
+}
+
+
+
+/* FONTS */
+@font-face {
+  font-family: "JetBrainsMonoNerdFont-Regular";
+  src: url('Fonts/JetBrainsMonoNerdFont-Regular.ttf');
 }
 
 @font-face {
-  font-family: 'JetBrainsMonoNerdFont-Regular';
-  src: url('Fonts/JetBrainsMonoNerdFont-Regular.ttf');
+  font-family: "FiraSans-ExtraBold";
+  src: url('Fonts/FiraSans-ExtraBold.otf');
+}
+
+@font-face {
+  font-family: "Overpass-Regular";
+  src: url('Fonts/Overpass-Regular.otf');
+}
+
+@font-face {
+  font-family: "Overpass-SemiBold";
+  src: url('Fonts/Overpass-SemiBold');
+}
+
+@font-face {
+  font-family: "Overpass-Light";
+  src: url('Fonts/Overpass-Light.otf')
+}
+
+/* CORE */
+
+h1 {
+ font-family: 'FiraSans-ExtraBold';
+ color: #ffffff;
+}
+
+h2 {
+  font-family: 'Overpass-SemiBold';
+  color: #E43700
+}
+
+h3 {
+  font-family: 'Overpass-Regular';
+  color: #ffffff;
+}
+
+p {
+  font-family: 'Overpass-Light';
+  color: #ffffff;
 }
