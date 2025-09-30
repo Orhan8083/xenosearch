@@ -34,6 +34,17 @@ input {
   border-color: #ffffff;
 }
 
+#Logo h1 {
+  margin: auto;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+  padding: 10px;
+  font-size: 100px;
+  z-index: 2;
+}
 
 #Bar form input {
   margin: auto;
@@ -47,7 +58,7 @@ input {
   z-index: 2;
 }
 
-#page1 {
+#page1, #page2 {
   background-color: #07173F;
   color: #ffffff;
   border-radius: 25px;
@@ -64,47 +75,15 @@ input {
   padding: 10px;
   font-size: 16px;
   z-index: 2;
-  visibility: hidden;
-
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease, visibility 0s linear 0.5s;
 }
 
-#page1.show {
+#page1.show, #page2.show {
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.5s ease;
-}
-
-#page2 {
-  background-color: #07173F;
-  color: #ffffff;
-  border-radius: 25px;
-  border-color: #ffffff;
-  border: 10px;
-  margin: auto;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  text-align: left;
-  transform: translate(-50%, -50%);
-  width: auto;
-  height: 500px;
-  padding: 10px;
-  font-size: 16px;
-  z-index: 2;
-  visibility: hidden;
-
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease;
-}
-
-#page2.show {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease, visibility 0s linear 0s;
 }
 
 #togglemenu button {
@@ -143,7 +122,6 @@ input {
 }
 
 #togglemenu .menuelements {
-  visibility: hidden;
   align-items: left;
   position: absolute;
   display: flex;
@@ -152,14 +130,14 @@ input {
 
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease, visibility 0s linear 0.5s;
 }
 
 #togglemenu .menuelements.show {
   opacity: 1;
   visibility: visible;
   z-index: 3;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease, visibility 0s linear 0s;
 }
 
 
